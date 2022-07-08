@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./font/Poppins-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./font/Poppins-Bold.ttf");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/warm-bg-main-3.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease;
+  background-repeat: no-repeat;
+}
+
+.app.cold {
+  background-image: url("./images/warm-bg-main-2.jpg");
+}
+
+.app__main {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  color: #fff;
+}
+
+.app__search {
+  width: 60%;
+  margin: 0 0 75px;
+  display: flex;
+  flex: 1;
+}
+
+.app__input {
+  display: block;
+  width: 90%;
+  padding: 15px;
+  margin-left: auto;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0 16px;
+  margin-top: 35px;
+  transition: 0.4s ease;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+.app__input:active,
+.app__input:focus {
+  border-radius: 16px 0;
+}
+
+.app__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.app__country {
+  font-size: 2rem;
+  margin: bottom 10px;
+}
+
+.app__date {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.app__temperature,
+.app__temperature span {
+  font-size: 7rem;
+  text-shadow: 8px 8px 2px #000000a0;
+  margin-bottom: 30px;
+}
+
+.app__status {
+  font-size: 1.5rem;
+  background-color: #0087ff;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .app__main,
+  .app__input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .app__main,
+  .app__input {
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .app__search {
+    width: 80%;
+    margin: 0 auto;
+    flex: none;
+  }
+  .app__info {
+    flex: none;
+  }
+  .app__temperature,
+  .app__temperature span {
+    font-size: 5rem;
+    margin-bottom: 20px;
+  }
+  .app__date {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .app__main,
+  .app__input {
+    justify-content: flex-start;
+  }
+  .app__main{
+    padding-top: 80px;
+  }
+  .app__search {
+    width: 85%;
+    margin-bottom: 50px;
+  }
+  .app__status {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+ 
+  .app__search{
+    width: 90%;
+  }
+  .app__date {
+    font-size: 1.3rem;
+  }
+  .app__country{
+    font-size: 1.8rem;
+  }
+  .app__temperature,
+  .app__temperature span {
+    font-size: 4rem;
+  }
+}
+
